@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        .common_class {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <ul id="ul">
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+        </ul>
+    </header>
+    <script>
+        // create element and append child with innerText in the last
+        const header = document.getElementById('header');
+        const h1 = document.createElement('h1');
+        h1.innerText = 'Welcome dom';
+        header.appendChild(h1);
+
+        // added class system 1
+        h1.classList.add('common_class');
+
+        // added class system 2
+        h1.className = 'common_class'
+
+        // setattribute
+        h1.setAttribute('id', 'h1'); //id set ho be h1 name e
+        h1.removeAttribute('id');
+
+
+
+        // append in the first system
+        header.insertBefore(h1, document.getElementById('ul'));// kon element ke dekhabo and kothay ba kar age bosabo tar id nite hobe.
+
+        // innerHTML
+
+    </script>
+</body>
+
+</html>
